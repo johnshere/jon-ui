@@ -6,14 +6,33 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky"
+    "build": "pnpm run -C builder start",
+    "build:theme": "pnpm run -C packages/theme-chalk build",
+    "dev": "pnpm -C play dev",
+    "prepare": "husky",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
     "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
   },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@esbuild-kit/cjs-loader": "^2.4.4",
+    "@types/node": "^22.13.11",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vitejs/plugin-vue-jsx": "^4.1.2",
+    "eslint": "^9.23.0",
+    "fast-glob": "^3.3.3",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.0"
+    "lint-staged": "^15.5.0",
+    "sass": "^1.86.0",
+    "unplugin-vue-components": "^28.4.1",
+    "unplugin-vue-macros": "^2.14.5",
+    "vite": "^6.2.2",
+    "vite-plugin-inspect": "^11.0.0"
   }
 }
