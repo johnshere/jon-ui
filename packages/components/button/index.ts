@@ -1,5 +1,5 @@
 import Button from "./src/button.vue";
 
-export const JButton = Button;
-export default JButton;
+export const JnButton = Button;
+export default JnButton;
 export * from "./src/button";

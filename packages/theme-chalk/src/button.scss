@@ -1,0 +1,8 @@
+@use "./config/vars" as *;
+@use "./config/functions";
+@use "./mixins/mixins" as *;
+@use "./mixins/variables" as *;
+
+@include block(button) {
+  @include setComponentVar("button", $button);
+}

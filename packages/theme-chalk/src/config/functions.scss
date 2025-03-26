@@ -1,0 +1,17 @@
+@use "config" as *;
+
+@function generateVarName($words) {
+  $name: "--" + $namespace;
+  @each $word in $words {
+    @if $word != "" {
+      $name: $name + "-" + $word;
+    }
+  }
+  @return $name;
+}
+@function getVarName($args...) {
+  @return generateVarName($args);
+}
+@function getVar($args...) {
+  @return var(#{generateVarName($args)});
+}

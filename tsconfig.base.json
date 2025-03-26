@@ -16,6 +16,9 @@
         "rootDir": ".",
         "types": [],
         "paths": {
+            "@jon-ui/builder": [
+                "builder"
+            ],
             "@jon-ui/utils": [
                 "packages/utils"
             ],

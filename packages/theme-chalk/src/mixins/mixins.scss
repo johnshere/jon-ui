@@ -1,0 +1,62 @@
+@use "../config/config" as *;
+
+$Block: null;
+$Element: null;
+// BEM block
+@mixin block($block) {
+  $Block: $namespace + $block-separator + $block !global;
+
+  .#{$Block} {
+    @content;
+  }
+}
+
+// BEM element
+@mixin element($element) {
+  $Element: $element !global;
+  $selector: &;
+  $currentSelector: "";
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector +
+      "." +
+      $Block +
+      $element-separator +
+      $unit +
+      ","};
+  }
+
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$currentSelector} {
+        @content;
+      }
+    }
+  }
+}
+
+// BEM modifier
+@mixin modifier($modifier) {
+  $selector: &;
+  $currentSelector: "";
+  @each $unit in $modifier {
+    $currentSelector: #{$currentSelector +
+      $selector +
+      $modifier-separator +
+      $unit +
+      ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}

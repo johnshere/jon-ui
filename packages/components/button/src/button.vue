@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="jn-button">
+        ttt
         <slot />
     </div>
 </template>

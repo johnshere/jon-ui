@@ -2,12 +2,13 @@
   <div class="play-container">
     <div v-loading="true" />
     111
-    <j-button>test</j-button>
+    <JnButton>test111</JnButton>
   </div>
 </template>
 
 <script setup lang="ts">
-import { JButton } from '@jon-ui/components'
+import { JnButton } from '@jon-ui/components'
+import '../../packages/theme-chalk/src/button.scss'
 </script>
 
 <style lang="scss">

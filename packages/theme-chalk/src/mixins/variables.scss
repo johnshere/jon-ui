@@ -1,0 +1,11 @@
+@use "../config/functions" as *;
+// set all var for component
+@mixin setComponentVar($name, $variables) {
+  @each $attribute, $value in $variables {
+    @if $attribute == "default" {
+      #{getVarName($name)}: #{$value};
+    } @else {
+      #{getVarName($name, $attribute)}: #{$value};
+    }
+  }
+}
