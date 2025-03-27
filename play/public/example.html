@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jon ui</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .desktop-simulator,
+        .mobile-simulator {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .desktop-simulator {
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .mobile-simulator {
+            width: 30%;
+            min-width: 415px;
+            justify-content: flex-start;
+        }
+
+        .desktop-simulator .simulator-wrap,
+        .mobile-simulator .simulator-wrap {
+            border-radius: 36px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .desktop-simulator .simulator-wrap {
+            width: 100%;
+            max-width: 1280px;
+            height: 812px;
+        }
+
+        .mobile-simulator .simulator-wrap {
+            width: 375px;
+            height: 812px;
+        }
+
+        .desktop-simulator iframe,
+        .mobile-simulator iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="desktop-simulator">
+        <div class="simulator-wrap">
+            <iframe src="./index.html" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="mobile-simulator">
+        <div class="simulator-wrap">
+            <iframe src="./index.html" frameborder="0"></iframe>
+
+        </div>
+    </div>
+</body>
+
+</html>

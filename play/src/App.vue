@@ -1,8 +1,8 @@
 <template>
-  <div class="play-container">
+  <div class="play-wrap">
     <div v-loading="true" />
     111
-    <JnButton>test111</JnButton>
+    <JnButton>test111222</JnButton>
   </div>
 </template>
 
@@ -22,7 +22,7 @@ body {
     height: 100%;
     width: 100%;
 
-    .play-container {
+    .play-wrap {
       height: 100%;
       width: 100%;
       display: flex;
