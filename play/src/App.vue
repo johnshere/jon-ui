@@ -1,13 +1,14 @@
 <template>
   <div class="play-wrap">
-    <div v-loading="true" />
-    111
-    <JnButton>test111222</JnButton>
+    <JnConfigProvider>
+      111
+      <JnButton>test111222</JnButton>
+    </JnConfigProvider>
   </div>
 </template>
 
 <script setup lang="ts">
-import { JnButton } from '@jon-ui/components'
+import { JnConfigProvider, JnButton } from '@jon-ui/components'
 import '../../packages/theme-chalk/src/button.scss'
 </script>
 
